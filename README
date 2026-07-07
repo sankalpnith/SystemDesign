@@ -1,1 +1,4 @@
 SystemDesign Concepts
+Distributed Locks -> pessimistic lock(Acquire lock first) , optimistic lock(perform action first and check later)
+Consensus Protocol -> Paxos and Raft
+Service Discovery
