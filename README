@@ -1,4 +1,17 @@
 SystemDesign Concepts
-Distributed Locks -> pessimistic lock(Acquire lock first) , optimistic lock(perform action first and check later)
-Consensus Protocol -> Paxos and Raft
-Service Discovery
+
+Consistency Models -> 
+1. Strong Consistency, 
+2. Casual Consistency(Causal consistency is slightly weaker than strong consistency. 
+It ensures that if a read or write causally depends on a previous write, then any replica that serves the dependent operation 
+will first apply that earlier write. In this way, the system preserves the correct cause-and-effect relationships between operations, 
+without requiring full synchronization across all replicas.)
+3. Eventual Consistency
+
+Key primitives for coordination across services:-
+1.Leader election
+2. Distributed Locks -> pessimistic lock(Acquire lock first) , optimistic lock(perform action first and check later)
+3. Consensus Protocol -> Paxos and Raft
+4. Service Discovery
+
+APache ZooKeeper
