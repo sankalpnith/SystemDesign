@@ -43,3 +43,17 @@ Split-Brain -> Under normal conditions, this leader directs operations so that a
    This can result in a split-brain, where two leaders accept writes simultaneously, potentially causing severe data inconsistencies and corruption. 
    To prevent this, distributed systems use quorum-based consensus algorithms and fencing mechanisms. 
    Quorum algorithms ensure that a majority of nodes agree before a new leader can take control, which prevents conflicting operations during a partition.
+
+Retry -> Exponential BackOff  - If many clients experience a failure simultaneously, they will all wait 1 second and then retry. 
+         Then they will all wait 2 seconds and retry together. This synchronized wave of retries is known as the thundering herd problem.
+      -> Jitter - Instead of waiting exactly 4 seconds, a client might wait a random duration between, for example, 3 and 5 seconds. 
+         When thousands of clients apply jitter, their retry attempts are spread out smoothly over time, 
+         preventing traffic spikes and giving the downstream service a much more manageable load.    
+
+Smart retries help handle transient failures without causing cascading outages.
+
+Exponential backoff with jitter gives services time to recover and prevents synchronized retry storms.
+
+Idempotent operations ensure retries do not cause data corruption, duplicate transactions, or other unintended side effects.
+
+Checkpointing allows long-running processes to resume progress efficiently after a failure.
