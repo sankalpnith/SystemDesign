@@ -57,3 +57,12 @@ Exponential backoff with jitter gives services time to recover and prevents sync
 Idempotent operations ensure retries do not cause data corruption, duplicate transactions, or other unintended side effects.
 
 Checkpointing allows long-running processes to resume progress efficiently after a failure.
+
+Read Repair -> Read repair is a technique used in distributed systems to fix inconsistencies between replicas during a read operation. 
+               When a client reads data, the system checks multiple replicas and, if it finds outdated or conflicting versions, 
+               it updates the stale replicas with the most recent data. This helps the system gradually converge to a consistent 
+               state without requiring immediate synchronization after every write, which is especially useful in systems prioritizing availability over strict consistency.
+Write fencing-> It is a technique used to ensure that only one node in a distributed system can write to a resource at any given time. 
+                It works by assigning an incrementing token or version number to the node allowed to write; if another node tries to write with an older token, 
+                its writes are rejected. This prevents conflicts like the “split-brain” problem, where multiple nodes mistakenly think they are the leader 
+                and accept writes simultaneously.
