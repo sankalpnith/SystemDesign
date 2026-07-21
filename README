@@ -66,3 +66,4 @@ Write fencing-> It is a technique used to ensure that only one node in a distrib
                 It works by assigning an incrementing token or version number to the node allowed to write; if another node tries to write with an older token, 
                 its writes are rejected. This prevents conflicts like the “split-brain” problem, where multiple nodes mistakenly think they are the leader 
                 and accept writes simultaneously.
+CPU Scheduling -> Round-robin scheduling, Priority-based scheduling, Multilevel queue approach
