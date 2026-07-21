@@ -9,7 +9,7 @@ without requiring full synchronization across all replicas.)
 3. Eventual Consistency
 
 Key primitives for coordination across services:-
-1.Leader election
+1. Leader election
 2. Distributed Locks -> pessimistic lock(Acquire lock first) , optimistic lock(perform action first and check later)
 3. Consensus Protocol -> Paxos and Raft
 4. Service Discovery
@@ -28,3 +28,18 @@ Google Spanner, a globally distributed database, prioritizes strong consistency.
 To achieve this, it uses atomic clocks and a protocol called Two-Phase Commit to ensure that all transactions are globally consistent.
 
 Azure Cosmos DB is unique because it doesn’t force a single choice. Instead, it offers developers five different, well-defined consistency levels.
+
+-> Achieving High Availability
+1 Redundancy -> Redundancy can be physical (multiple zones, regions, servers) or logical (multiple service replicas running in containers or clusters).
+  Redundancy Models:
+  Active-Passive -> one component (the active component) handles all the traffic, while a duplicate component (the passive component) remains on standby. 
+     The passive instance only becomes active if the primary one fails. This is also known as a failover setup. Eg:- Databases
+  Active-Active -> All redundant components are active simultaneously, and a load balancer distributes traffic among them. 
+     If one component fails, the load balancer simply redirects its traffic to the remaining healthy instances. This provides better resource utilization and faster recovery. 
+     Eg:- Load Balanced Application servers
+
+Split-Brain -> Under normal conditions, this leader directs operations so that all nodes agree on the system's state. When a network partition occurs, 
+   some nodes may become isolated and lose communication with the leader. Each isolated group might assume the leader has failed and attempt to elect a new leader independently.
+   This can result in a split-brain, where two leaders accept writes simultaneously, potentially causing severe data inconsistencies and corruption. 
+   To prevent this, distributed systems use quorum-based consensus algorithms and fencing mechanisms. 
+   Quorum algorithms ensure that a majority of nodes agree before a new leader can take control, which prevents conflicting operations during a partition.
