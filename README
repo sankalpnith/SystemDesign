@@ -14,4 +14,17 @@ Key primitives for coordination across services:-
 3. Consensus Protocol -> Paxos and Raft
 4. Service Discovery
 
-APache ZooKeeper
+Apache ZooKeeper for coordination
+
+CAP theorem -> In the event of a network partition, a distributed system can provide either consistency or availability, but not both simultaneously
+PACELC -> If partition (P): If a partition (P) occurs, the system must choose between availability (A) and consistency (C). This is the original CAP theorem trade-off.
+   A network failure forces a hard choice between staying online with potentially stale data or going offline to preserve data integrity.
+   Else (E): In the absence of a partition, when the system is running normally, it must choose between latency (L) and consistency (C).
+
+Amazon DynamoDB  -> PA/EL -> It chooses Availability during a Partition and Latency during normal operation (Else). 
+It achieves this by replicating data asynchronously, which often provides eventual consistency.
+
+Google Spanner, a globally distributed database, prioritizes strong consistency. It is a PC/EC system. It chooses Consistency during a Partition and Consistency during normal operation (Else). 
+To achieve this, it uses atomic clocks and a protocol called Two-Phase Commit to ensure that all transactions are globally consistent.
+
+Azure Cosmos DB is unique because it doesn’t force a single choice. Instead, it offers developers five different, well-defined consistency levels.
