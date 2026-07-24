@@ -67,3 +67,14 @@ Write fencing-> It is a technique used to ensure that only one node in a distrib
                 its writes are rejected. This prevents conflicts like the “split-brain” problem, where multiple nodes mistakenly think they are the leader 
                 and accept writes simultaneously.
 CPU Scheduling -> Round-robin scheduling, Priority-based scheduling, Multilevel queue approach
+
+Comunication Pattern -> 
+  Pull Based -> Polling, Long Polling
+  Push Based -> 
+     WebSockets
+     WebHooks(When a relevant event happens, the provider automatically sends an HTTP POST request with details about the event to the consumer’s registered URL)
+     Server Sent Events(SSE) -> Unlike WebSockets, which support two-way communication, SSE is strictly one-way: the server streams events to the client 
+         after the connection is established
+    HeartBeat -> A heartbeat is a common technique for liveness detection.
+    Timeouts -> A timeout defines a maximum wait period. If no response is received within that time, the calling service gives up
+
