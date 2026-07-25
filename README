@@ -78,3 +78,7 @@ Comunication Pattern ->
     HeartBeat -> A heartbeat is a common technique for liveness detection.
     Timeouts -> A timeout defines a maximum wait period. If no response is received within that time, the calling service gives up
 
+Data Serialization:- 
+    Textual Data Formats -> XML, JSON
+    Binary Data Formats -> ProtoBuf -> used in gRPC, Apache Thrift used in gRPC both used for internal microservices, Apache Avro for data and streaming pipelines like Apache Kafka
+
