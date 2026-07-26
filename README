@@ -81,4 +81,32 @@ Comunication Pattern ->
 Data Serialization:- 
     Textual Data Formats -> XML, JSON
     Binary Data Formats -> ProtoBuf -> used in gRPC, Apache Thrift used in gRPC both used for internal microservices, Apache Avro for data and streaming pipelines like Apache Kafka
+Storage :-
+  Block Storage -> HDD, SSD
+  File Storage -> Windows file server, Linux NFS server, NAS
+  Object storage -> Amazon S3, Google Cloud Storage, Azure Blob Storage
+  Blob Storage -> Azure Blob Storage, Oracle Cloud Object Storage, database BLOB
+
+NoSQL DB -> Document DB, Key Value Stores, Column Family and Graph DB
+ACID -> Atomicity, Consistency, Isolation, Durability
+     Isolation is achieved by Two-Phase Commit (2PC)
+
+BASE -> Basically Available, Soft State, Eventually Consistent
+
+DB Index
+  1. Tree based indexes -> Data is stored in a sorted tree structure, like a B-tree or B+ tree. Great for range queries, sorting, and prefix lookups
+  2. Hash indexes -> They use a hash function to map keys into specific buckets (locations), where pointers to the data are stored. extremely fast for exact matches, not suitable for range queries 
+  3. Full-text search indexes -> efficient for large blocks of text.breaking text into individual words (tokens) and indexing them for fast retrieval of keywords and phrases
+             use cases like product descriptions, blog posts, and documents. ElasticSearch
+  4. Spatial indexing -> For GeoSpatial Queries
+     a) QuadTree -> Recursively partitioning a two-dimensional space(lat,long) into four equal quadrants or regions until every quadrant contains a manageable number of points or the maximum tree depth is reached.
+                  Child nodes are connected by a doubly linked list. If data is highly clustered or skewed, it can result in a deep, unbalanced tree in some areas while other areas remain sparse.
+     b) R-Tree -> 
+
+
+
+
+
+
+
 
