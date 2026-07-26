@@ -101,8 +101,9 @@ DB Index
   4. Spatial indexing -> For GeoSpatial Queries
      a) QuadTree -> Recursively partitioning a two-dimensional space(lat,long) into four equal quadrants or regions until every quadrant contains a manageable number of points or the maximum tree depth is reached.
                   Child nodes are connected by a doubly linked list. If data is highly clustered or skewed, it can result in a deep, unbalanced tree in some areas while other areas remain sparse.
-     b) R-Tree -> 
+     b) R-Tree -> An R-tree(Rectangular tree) organizes nearby spatial objects into bounding rectangles, forming a hierarchy of nested regions.
 
+Replication
 
 
 
