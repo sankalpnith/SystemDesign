@@ -104,9 +104,66 @@ DB Index
      b) R-Tree -> An R-tree(Rectangular tree) organizes nearby spatial objects into bounding rectangles, forming a hierarchy of nested regions.
 
 Replication
+Synchronous replication
+In synchronous replication, the primary node waits to acknowledge a client’s write request until at least one replica has confirmed that it has received and saved the data
+Asynchronous replication
+In asynchronous replication, the primary node acknowledges a write as soon as it saves the data locally, without waiting for any replicas to be updated
 
+Primary-secondary replication
+In primary-secondary replication, the primary database handles all write operations, while the secondary replicas only manage reads.
 
+Primary-primary replication
+In primary-primary replication, two or more databases act as primaries, and both can accept write requests.
 
+Multi-primary replication 
+Multi-primary replication enables multiple primary nodes, often distributed across different geographic regions, to simultaneously accept write operations.
+
+Snapshot replication
+In snapshot replication, a distributor takes periodic snapshots of the main database and replicates them to the secondary databases or replicas
+
+Database partitioning
+At its core, database partitioning means breaking a large database table into smaller, more manageable pieces.
+
+Horizontal partitioning: This partitioning involves dividing data into smaller sub-tables horizontally, while maintaining the original schema
+Vertical partitioning: This type of partitioning alters the table schema by dividing the data vertically, thereby optimizing storage efficiency and performance
+
+Partitioning techniques#
+Range-based partitioning: Data is divided based on a continuous range of values, such as dates or price points
+List partitioning: Data is partitioned based on a list of discrete values. A users table, for instance, could be partitioned by country, with partitions for the USA, Canada, and the UK
+Hash partitioning: This method distributes data evenly across partitions, which is useful for preventing hotspots
+Composite partitioning: This approach combines two or more partitioning methods to achieve a more comprehensive solution
+
+Partitioning involves vertical scaling within a server (making one server more organized), while sharding involves horizontal scaling across servers (adding more servers).
+
+Database sharding
+Database sharding is a method of dividing a larger database into smaller, more manageable pieces, known as shards. Each shard is a complete and independent database that holds a subset of the total data.
+
+Key-based sharding
+Also known as hash-based sharding (similar to hash partitioning), this method uses a shard key (e.g., user_id) and passes it through a hash function.
+
+Range-based sharding
+Range-based sharding is a technique where data is divided into shards based on predefined ranges of a key attribute, such as date, age, or user ID. Each shard is responsible for a specific range, 
+making it easier to locate data.
+
+Directory-based sharding
+This approach utilizes a lookup table, or locator service, that maintains a record of which shard contains which data.
+
+Geographic sharding
+Geographic sharding is a method of distributing data across multiple database shards based on the physical location or region of the data’s origin.
+
+Entity-based sharding
+Entity-based sharding is a technique that divides the database into shards based on specific entities or objects, grouping related data together according to their type, such as users, products, or orders.
+
+Hybrid sharding
+Hybrid sharding combines multiple strategies to optimize data distribution based on different criteria
+
+Consistent hashing#
+Consistent hashing is a technique for distributing data across servers using a circular hash ring
+
+Virtual Nodes
+When a vnode is created, its name (like N1.1, N1.2, etc.) is hashed to find its position on the ring. This results in a much finer-grained and more uniform distribution of responsibility.
+
+Rebalancing is the process of moving data between nodes in a distributed system to maintain optimal distribution, typically triggered by changes in the cluster’s membership (nodes joining, leaving, or failing).
 
 
 
