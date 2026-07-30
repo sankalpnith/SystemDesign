@@ -165,6 +165,12 @@ When a vnode is created, its name (like N1.1, N1.2, etc.) is hashed to find its 
 
 Rebalancing is the process of moving data between nodes in a distributed system to maintain optimal distribution, typically triggered by changes in the cluster’s membership (nodes joining, leaving, or failing).
 
+Authorization methods#
+Role-based access control (RBAC)
+Attribute-based access control (ABAC): ABAC takes a more granular approach by considering multiple attributes (such as user department, time of access, and location) before granting access. Instead of fixed roles, access decisions are made based on policies that evaluate these attributes.
+Policy-based access control (PBAC): PBAC is an authorization model in which access decisions are driven by clearly defined policies, rather than solely by user roles or attributes. It builds upon models like RBAC and ABAC by introducing a centralized, flexible policy engine that evaluates contextual conditions, attributes, and rules before granting access.
+Discretionary access control (DAC): In DAC, the data owner determines access rights. This method provides high flexibility but can lead to inconsistent permission settings across the system
+
 
 
 
