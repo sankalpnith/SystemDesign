@@ -177,6 +177,30 @@ SAGA pattern A saga is a sequence of local transactions where each transaction u
  Styles of SAGA :- 
   Choreography: It is a decentralized approach to managing distributed transactions in microservices. Instead of using a central coordinator, each service performs its local transaction and then publishes an event that triggers the next service in the workflow.
   Orchestration: This model uses a central coordinator (the orchestrator) that directs the participating services. The orchestrator manages the entire sequence of transactions and compensating actions.
+Sidecar pattern
+The sidecar pattern involves deploying a helper container alongside the main application container within the same pod or on the same host. This sidecar container shares resources, such as the filesystem and network, with the main application, allowing it to augment or enhance its functionality without being part of the application itself.
+Common use cases for the sidecar pattern include logging, monitoring, security, and service discovery. For instance, we could have a sidecar that collects logs from the application and forwards them to a centralized logging service.
+
+Availability patterns in System Design#
+Circuit breaker pattern -> Closed, Open(rejects all requests), Half-Open
+Retry and backoff pattern#
+Failover pattern# The basic idea is to have a standby (or secondary) system ready to take over in the event the primary system fails. It’s like having a backup generator for our house. 
+      If the main power grid goes out, the generator kicks in automatically, and we barely notice the disruption.
+Rate Limiting
+Load Balancing
+API Gateway
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
