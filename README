@@ -171,6 +171,13 @@ Attribute-based access control (ABAC): ABAC takes a more granular approach by co
 Policy-based access control (PBAC): PBAC is an authorization model in which access decisions are driven by clearly defined policies, rather than solely by user roles or attributes. It builds upon models like RBAC and ABAC by introducing a centralized, flexible policy engine that evaluates contextual conditions, attributes, and rules before granting access.
 Discretionary access control (DAC): In DAC, the data owner determines access rights. This method provides high flexibility but can lead to inconsistent permission settings across the system
 
+Scalability patterns in System Design#
+Strangler fig pattern# enables a gradual and safe migration from a legacy monolithic application to a modern microservices architecture.
+SAGA pattern A saga is a sequence of local transactions where each transaction updates data within a single service. If a local transaction fails, the saga executes a series of compensating transactions to undo the preceding transactions.
+ Styles of SAGA :- 
+  Choreography: It is a decentralized approach to managing distributed transactions in microservices. Instead of using a central coordinator, each service performs its local transaction and then publishes an event that triggers the next service in the workflow.
+  Orchestration: This model uses a central coordinator (the orchestrator) that directs the participating services. The orchestrator manages the entire sequence of transactions and compensating actions.
+
 
 
 
