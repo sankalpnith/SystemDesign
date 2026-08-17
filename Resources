@@ -32,3 +32,34 @@
 - Long Polling vs WebSockets: https://lnkd.in/eYZnk-93
 - Stateful vs Stateless Architecture: https://lnkd.in/egXhAmY4
 - Batch vs Stream Processing: https://lnkd.in/ez5v_suJ
+
+Java / Backend
+
+1. How HashMap works internally
+2. ConcurrentHashMap vs HashMap
+3. String immutability in Java
+4. ArrayList vs LinkedList
+5. Garbage Collection in Java
+6. JVM vs JRE vs JDK
+7. Checked vs Unchecked Exceptions
+8. try-catch-finally execution flow
+9. Multithreading, Synchronization & Race Conditions
+10. Runnable vs Callable
+11. Executor Framework
+12. Deadlock, Starvation & Livelock
+13. volatile vs synchronized
+14. Java 8 Streams
+15. Optional in Java
+16. LRU Cache Design in Java
+17. Microservices vs Monolithic Architecture
+18. Idempotent APIs
+19. SQL vs NoSQL
+20. Database Indexing
+21. Redis Caching Strategies
+22. Pagination for Large Datasets
+23. REST API Design Best Practices
+24. Authentication vs Authorization
+25. Connection Pooling
+26. Debugging a Slow Spring Boot API
+27. Dependency Injection in Spring
+28. Designing High-Throughput, Low-Latency Systems
