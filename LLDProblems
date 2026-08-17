@@ -1,0 +1,48 @@
+𝐂𝐨𝐫𝐞
+• Parking Lot
+• Splitwise
+• Elevator
+• ATM
+• Library
+• Movie Ticket Booking
+• Hotel Management
+• Airline Reservation
+• Cab Booking
+• Food Delivery
+
+𝐆𝐚𝐦𝐞𝐬
+• Snake & Ladder
+• Tic-Tac-Toe
+• Chess
+• Ludo
+• Minesweeper
+
+𝐑𝐞𝐚𝐥-𝐰𝐨𝐫𝐥𝐝
+• Vending Machine
+• Coffee Machine
+• Digital Wallet
+• Inventory Management
+• Shopping Cart
+
+𝐀𝐝𝐯𝐚𝐧𝐜𝐞𝐝
+• Logger
+• Notification System
+• LRU/LFU Cache
+• Rate Limiter
+• File System
+• Linux Find
+• Text Editor
+• Task Scheduler
+• Message Queue
+• URL Shortener
+
+And here is what interviewers actually evaluate:
+→ Requirement gathering
+→ OOP fundamentals
+→ SOLID principles
+→ Design Patterns
+→ Extensible design
+→ Abstraction & low coupling
+→ Edge cases & error handling
+→ Scalability & clean code
+→ Communication & trade-offs
